@@ -29,13 +29,11 @@
         <div class="column is-4 has-text-centered">
             <ul id="uneaten">
                 <h2 class="burger-list-headline"> EAT A BURGER! </h2>
-                <div id="burger-list">
                     {{#each burger}}
                     {{#unless devoured}}
                     {{> burger/burger-block devoured=false}}
                     {{/unless}}
                     {{/each}}
-                </div>
             </ul>
 
         </div>
@@ -43,14 +41,12 @@
             <ul id="eaten">
                 <h2 class="burger-list-headline">THE BURGERS YOU ATE!
                 </h2>
-                <div id="burger-list">
                     {{#each burger}}
                     {{#if devoured}}
                     {{!-- > means you're looking in the partials directory --}}
                     {{> burger/burger-block devoured=true}}
                     {{/if}}
                     {{/each}}
-                </div>
             </ul>
         </div>
         <div class="column is-2 has-text-centered"></div>
