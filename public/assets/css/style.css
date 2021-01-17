@@ -68,4 +68,22 @@ form {
 }
 
 @media only screen and (max-width: 768px) {
+
+h2 {
+    font-size: 25px;
+}
+
+#burger-headline {
+    width: 90%;
+    display: block;
+    margin: auto;
+  }
+
+ #search-burger, #lists{
+      margin: auto;
+  }
+#lists {
+    margin-bottom: 50px;
+}
+
 }
