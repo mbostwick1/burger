@@ -1,45 +1,71 @@
-<div class="jumbotron jumbotron-fluid">
+<section class="section is-warning">
     <div class="container">
-        <h1 class="display-4">THE VORTEX</h1>
-        <h2 class="lead">ATLANTA'S BEST BURGERS!</h2>
-        <h3 class="lead">It's Good to be Bad™</h3>
+        <img id="burger-headline" src="/assets/svgs/BurgerHeadline.svg" alt="burger icons and Eat–Da-Burger headline">
     </div>
-</div>
-<div class="container-fluid">
-    <div class="col-lg-12">
-        <h2>Add a Burger</h2>
-        <p>All burgers noted with “LTOP”</p>
+</section>
+
+<section>
+    <div class="column is-three-fifths is-offset-one-fifth has-text-centered">
+        <h2>Add to your Burger Bucket List</h2>
         <form class="create-form">
             <div class="form-group">
-                <input type="text" id="newBurger" name="burger_name" />
-                <button type="submit" id="burgerBtn">Add Burger</button>
+                <div class="field is-grouped is-grouped-centered">
+                    <div class="control">
+                        <input class="input" type="text" id="newBurger" name="burger_name"
+                            placeholder="PLAIN OL’ HAMBURGER">
+                    </div>
+                    <button class="button is-danger" type="submit" id="burgerBtn">Add Burger</button>
+                </div>
             </div>
         </form>
     </div>
-    <div class="row">
-        <div class="col-md-2" id="sides"></div>
-        <div class="col-md-4">
-            <ul id="uneaten">
-                <h2 class="burger-list-headline"> EAT A BURGER! </h2>
-                {{#each burger}}
-                {{#unless devoured}}
-                {{> burger/burger-block devoured=false}}
-                {{/unless}}
-                {{/each}}
-            </ul>
-        </div>
-        <div class="col-md-4">
-                 <ul id="eaten">
-                <h2 class="burger-list-headline">THE BURGERS YOU ATE!
-                </h2>
-                {{#each burger}}
-                {{#if devoured}}
-                {{!-- > means you're looking in the partials directory --}}
-                {{> burger/burger-block devoured=true}}
-                {{/if}}
-                {{/each}}
-            </ul>
-        </div>
-        <div class="col-md-2" id="sides"></div>
-    </div>
+</section>
+
+<section>
+    <div class="columns">
+  <div class="column is-2 has-text-centered"></div>
+  <div class="column is-4 has-text-centered">
+      <ul id="uneaten">
+            <h2 class="burger-list-headline"> EAT A BURGER! </h2>
+            {{#each burger}}
+            {{#unless devoured}}
+            {{> burger/burger-block devoured=false}}
+            {{/unless}}
+            {{/each}}
+        </ul>
+
+
+
+
+  </div>
+  <div class="column is-4 has-text-centered">
+      <ul id="eaten">
+            <h2 class="burger-list-headline">THE BURGERS YOU ATE!
+            </h2>
+            {{#each burger}}
+            {{#if devoured}}
+            {{!-- > means you're looking in the partials directory --}}
+            {{> burger/burger-block devoured=true}}
+            {{/if}}
+            {{/each}}
+        </ul>
+
+
+
+
+
+  </div>
+  <div class="column is-2 has-text-centered"></div>
+  
 </div>
+</section>
+
+
+
+
+
+
+
+
+
+
