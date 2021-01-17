@@ -14,58 +14,47 @@
                         <input class="input" type="text" id="newBurger" name="burger_name"
                             placeholder="PLAIN OL’ HAMBURGER">
                     </div>
-                    <button class="button is-danger" type="submit" id="burgerBtn">Add Burger</button>
+                    <button class="button" type="submit" id="burgerBtn"><i class="fas fa-hamburger"
+                            style="margin-right: 7px;"></i>ADD
+                        BURGER
+                    </button>
                 </div>
             </div>
         </form>
     </div>
 </section>
 
-<section>
+<section id="lists">
     <div class="columns">
-  <div class="column is-2 has-text-centered"></div>
-  <div class="column is-4 has-text-centered">
-      <ul id="uneaten">
-            <h2 class="burger-list-headline"> EAT A BURGER! </h2>
-            {{#each burger}}
-            {{#unless devoured}}
-            {{> burger/burger-block devoured=false}}
-            {{/unless}}
-            {{/each}}
-        </ul>
+        <div class="column is-2 has-text-centered"></div>
+        <div class="column is-4 has-text-centered">
+            <ul id="uneaten">
+                <h2 class="burger-list-headline"> EAT A BURGER! </h2>
+                <div id="burger-list">
+                    {{#each burger}}
+                    {{#unless devoured}}
+                    {{> burger/burger-block devoured=false}}
+                    {{/unless}}
+                    {{/each}}
+                </div>
+            </ul>
 
+        </div>
+        <div class="column is-4 has-text-centered">
+            <ul id="eaten">
+                <h2 class="burger-list-headline">THE BURGERS YOU ATE!
+                </h2>
+                <div id="burger-list">
+                    {{#each burger}}
+                    {{#if devoured}}
+                    {{!-- > means you're looking in the partials directory --}}
+                    {{> burger/burger-block devoured=true}}
+                    {{/if}}
+                    {{/each}}
+                </div>
+            </ul>
+        </div>
+        <div class="column is-2 has-text-centered"></div>
 
-
-
-  </div>
-  <div class="column is-4 has-text-centered">
-      <ul id="eaten">
-            <h2 class="burger-list-headline">THE BURGERS YOU ATE!
-            </h2>
-            {{#each burger}}
-            {{#if devoured}}
-            {{!-- > means you're looking in the partials directory --}}
-            {{> burger/burger-block devoured=true}}
-            {{/if}}
-            {{/each}}
-        </ul>
-
-
-
-
-
-  </div>
-  <div class="column is-2 has-text-centered"></div>
-  
-</div>
+    </div>
 </section>
-
-
-
-
-
-
-
-
-
-

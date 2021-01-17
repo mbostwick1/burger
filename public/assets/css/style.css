@@ -9,17 +9,47 @@ html {
 }
 
 h2 {
-    font-family: 'CubanoRegular';
-    font-size: 30px;
-    margin-bottom: 10px;
+  font-family: "CubanoRegular";
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+#burgers-added {
+  margin-bottom: 5px;
+  text-align: left;
 }
 
 #newBurger {
-    width: 300px;
+  width: 300px;
 }
 
+#burgerBtn,
+#devourBtn {
+  font-weight: bold;
+  color: white;
+}
 
+#burgerBtn {
+  background-color: #e81e25;
+}
 
+#devourBtn {
+  background-color: #46a848;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+#lists {
+  margin-bottom: 100px;
+}
 
 /* FOOTER */
 
