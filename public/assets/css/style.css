@@ -79,9 +79,9 @@ h2 {
     margin: auto;
   }
 
- #search-burger, #lists{
+ /* #search-burger, #lists{
       margin: auto;
-  }
+  } */
 #lists {
     margin-bottom: 50px;
 }
